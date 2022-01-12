@@ -9,7 +9,7 @@ const bignum = require('bignum');
 module.exports.BLOCK_LEN = Math.pow(2,14);
 
 // open the torrent file using readFileSync and decode the obtained buffer
-function open(filepath) => {
+function open(filepath) {
   return bencode.decode(fs.readFileSync(filepath));
 };
 
@@ -25,3 +25,7 @@ function size(torrent){
   const size = torrent.info.files ? torrent.info.files.map(file => file.length).reduce((a,b) => a+b) : torrent.info.length;
   return bignum.toBuffer(size, {size: 8});
 }
+
+module.exports.open = open;
+module.exports.infoHash = infoHash;
+module.exports.size =  size;

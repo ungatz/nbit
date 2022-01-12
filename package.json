@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bencode": "^2.0.2",
+    "bignum": "^0.13.1"
+  }
+}

@@ -1,5 +1,5 @@
-#+TITLE: Specification
-* nbit
+#+TITLE: nbit
+* About
 - A command line tool to download .torrent files using the bittorrent protocol.
 - Made from scratch in Node.js
 * References
